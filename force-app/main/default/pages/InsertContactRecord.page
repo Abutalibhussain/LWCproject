@@ -1,0 +1,6 @@
+<apex:page controller="InsertContactRecord">
+    <apex:form >
+        <apex:inputText value="{!str}"/>
+    <apex:commandButton value="click me" action="methodone"/>
+    </apex:form>
+</apex:page>

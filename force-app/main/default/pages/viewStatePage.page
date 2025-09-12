@@ -1,0 +1,16 @@
+<apex:page controller="viewStateController" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        <apex:inputField value="{!acc.Name}" />
+            <apex:inputField value="{!acc.Phone}" />
+            <apex:commandButton value="Save" action="{!insertAccount}"/>
+        </apex:pageBlockSection>
+         <apex:pageBlockSection >
+        <apex:inputField value="{!cont.LastName}" />
+            <apex:inputField value="{!cont.Phone}" />
+            <apex:commandButton value="Save" action="{!insertAccount}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

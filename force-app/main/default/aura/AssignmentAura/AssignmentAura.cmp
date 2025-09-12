@@ -1,0 +1,18 @@
+<aura:component controller="AssignmentAuraController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <!-- Attributes -->
+    <aura:attribute name="records" type="Object[]" />
+    <aura:attribute name="selectedObject" type="String" />
+
+    <!-- Buttons to fetch records -->
+    <lightning:button label="Accounts" onclick="{!c.getAccounts}" class="slds-m-around_small" />
+    <lightning:button label="Contacts" onclick="{!c.getContacts}" class="slds-m-around_small" />
+    <lightning:button label="Opportunities" onclick="{!c.getOpportunities}" class="slds-m-around_small" />
+
+    <!-- Data Table -->
+    <lightning:datatable 
+        data="{! v.records }" 
+        columns="{! v.columns }" 
+        keyField="Id" 
+        hideCheckboxColumn="true" />
+</aura:component>

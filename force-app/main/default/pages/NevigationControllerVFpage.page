@@ -1,0 +1,7 @@
+<apex:page controller="NevigationController">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:commandButton value="Google" action="{!navigationMethod}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

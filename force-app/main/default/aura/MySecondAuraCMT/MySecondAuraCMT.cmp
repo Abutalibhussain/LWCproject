@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" name="str1" type="string" default="hi february 28"/>
+  	<div>salesforce and java </div>
+    <div>{!v.str1}</div>
+    <div style="text-align: justify; background-color: red;">This In Line CSS </div>
+    <div class="abu">hello class CSS by class refrence</div>
+    <div><div class="abu">hello class CSS by child class refrence</div></div> 
+    <aura:attribute access="public" name="strlist" type="list" default="['red' , 'green' , 'blue']"/>
+     <div>{!v.strlist[0]}</div>
+    <aura:iteration items="{!v.strlist}" var="item">
+        <div>{!item}</div>
+    </aura:iteration>
+    
+    
+</aura:component>

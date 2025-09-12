@@ -1,0 +1,26 @@
+<apex:page controller="actionFunctionController">
+    <apex:form >
+   <apex:pageBlock title="Search Account"> 
+       <apex:outputLabel value="Enter a text"/>
+       <apex:inputText value="{!str}"/>
+       
+       <input type= "button" value = "search" onclick= "fetchAccount()"/>
+       <apex:actionFunction name="fetchAccount" action="{!findAccount}" rerender="pbid"/>
+
+        </apex:pageBlock>
+        <apex:pageBlock title="{!$Label.Account_Info}" id="pbid">
+        <apex:outputPanel >
+         <p>
+             <b>{!acc.Name}</b>
+            </p>   
+            <p>
+              <b>{!acc.Phone}</b>  
+            </p> 
+            <p>
+              <b>{!acc.Industry}</b>  
+            </p>
+             
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

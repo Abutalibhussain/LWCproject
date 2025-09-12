@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <aura:attribute name="messageFromEvent" type="String"/>
+   
+    <!-- Note that name="cmpEvent" in aura:registerEvent
+     in ceNotifier.cmp -->
+    <aura:handler name="cmpEvent" event="c:abutalibBothEvent" action="{!c.handleComponentEvent}"/>
+
+    <!-- handler contains the notifier component -->
+    <c:abuChild />
+     
+    <p>{!v.messageFromEvent}</p>
+  
+</aura:component>

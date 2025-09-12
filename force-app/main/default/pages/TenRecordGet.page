@@ -1,0 +1,14 @@
+<apex:page Controller="TenRecordGetController">
+	<apex:form >
+         <apex:commandButton value="Call method1" action="{!method1}"/>
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!strlist}" var="acc">
+            <apex:column value="{!acc.Name}"/>
+        	<apex:column value="{!acc.Phone}"/>
+            <apex:column value="{!acc.Industry}"/>
+             <apex:column value="{!acc.id}"/>
+           
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

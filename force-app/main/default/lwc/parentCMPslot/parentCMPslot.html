@@ -1,0 +1,23 @@
+<template>
+<lightning-card title="Student info">
+<lightning-layout multiple-rows>
+<lightning-layout-item size="8">
+<ul>
+    <template for:each={studentInfoParent} for:item="student">
+        <li key={student.name}>
+        <c-std-info student-info={student} ontileclick={tileSelectHandler}>
+            <lightning-tile label={student.rollNumber} slot="stdinfo">
+            <p class="slds-truncate" title={student.name}>{student.name}</p>
+            <p class="slds-truncate" title={student.age}>{student.age}</p>
+        </lightning-tile>
+
+        <div>Additional markeup</div>
+        </c-std-info>
+        </li>
+    </template>
+</ul>
+</lightning-layout-item>
+<lightning-layout-item size="4">You have salected:{selectedStudentInfo}</lightning-layout-item>
+</lightning-layout>
+</lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<apex:page Controller="VFdevlopmentController" >
+   
+    <apex:form >
+    <apex:pageBlock title="Student__c">
+        <apex:pageBlockTable value="{!scdlist}" var="scd">
+            <apex:column value="{!scd.Name__c}"/>
+             <apex:column value="{!scd.Collage__c}"/>
+             <apex:column value="{!scd.Class_And_Branch__c}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+        {!scdlist[0].Name__c}
+        {!scdlist[1].Name__c}
+        {!scdlist[2].Name__c}
+        {!scdlist[3].Name__c}
+    </apex:form> 
+</apex:page>

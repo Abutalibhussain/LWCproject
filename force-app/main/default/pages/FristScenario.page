@@ -1,0 +1,13 @@
+<apex:page controller="FristScenario">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        <apex:inputText label="No of record you insert in Account" value="{!ForAcc}"/> 
+            <apex:inputText label="No of record you insert in Case" value="{!ForCas}"/> 
+            <apex:inputText label="No of record you insert inOpportunity" value="{!ForOpp}"/> 
+            <apex:inputText label="No of record you insert in Contact" value="{!ForCon}"/> 
+            <apex:commandButton value="Insert record" action="{!methodOne}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

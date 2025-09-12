@@ -1,0 +1,6 @@
+<apex:page >
+	<apex:form >
+		<apex:image id="abc" value="https://cdn.pixabay.com/photo/2014/07/26/23/38/rose-402671_640.jpg" width="500" height="200" alt="the msg if image not load or delete image" /> 
+		
+	</apex:form>
+</apex:page>

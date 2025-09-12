@@ -1,0 +1,18 @@
+<apex:page controller="DataBindingController" >
+    <apex:pageMessages >
+    </apex:pageMessages>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+            <apex:inputText label="Enter Name" value="{!str}"/>
+            <apex:inputField label="Name" value="{!acct.Name}"/>
+            <apex:inputField label="Industry" value="{!acct.Industry}"/>
+            <apex:inputField label="Phone" value="{!acct.Phone}"/>
+            <apex:outputText value="{!str}"></apex:outputText>
+            <!--    </apex:form><apex:commandButton value="Click me" action="{!verifyInpVal}"/> -->
+            <apex:commandButton value="Call Apex Function" action="{!FirstMethod}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

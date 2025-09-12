@@ -1,0 +1,13 @@
+<apex:page controller="GetDataFromControllerToVFpage">
+    <apex:form >
+    <apex:pageBlock title="Account">
+        <apex:pageBlockTable value="{!strlist}" var="acc">
+        <apex:column value="{!acc.Name}"/>
+            <apex:column value="{!acc.Phone}"/>
+            <apex:column value="{!acc.Industry}"/>
+            
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
+<!--this class conect with GetDataFromControllerToVFpage then it print Name like this {!strlist[0].Name} if i want ti itrate(large no of record the we shoild go for itration)-->

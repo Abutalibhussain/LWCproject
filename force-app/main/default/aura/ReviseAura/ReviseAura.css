@@ -1,0 +1,8 @@
+.THIS.abu {
+    text-align:center;
+    border: 4px dotted blue;
+}
+.THIS .abu {
+    text-align:center;
+    border: 5px solid red;
+}

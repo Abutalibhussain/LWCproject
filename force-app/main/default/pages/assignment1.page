@@ -1,0 +1,18 @@
+<apex:page controller="assingment1" >
+    <apex:form >
+        <apex:pageBlock >     
+            <apex:pageBlockSection >
+                <apex:outputText label="Show Account" id="otid"> </apex:outputText>
+                <apex:inputCheckbox value="{!flag}" onclick="otid" >
+                <apex:actionSupport event="onchange" action="{!newMethod}"/>
+                </apex:inputCheckbox>
+                <apex:pageBlockTable value="{!strList}" var="str"  >
+                    <apex:column value="{!str.name}"/>
+                    <apex:column value="{!str.phone}"/>
+                    <apex:column value="{!str.industry}"/>
+                </apex:pageBlockTable>
+                </apex:pageBlockSection>
+               <!-- <apex:commandButton value="Click" action="{!newMethod}" -->
+                    </apex:pageBlock>
+    </apex:form>
+</apex:page>

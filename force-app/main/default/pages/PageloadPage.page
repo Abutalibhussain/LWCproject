@@ -1,0 +1,11 @@
+<apex:page controller="PageLoadController" >
+    <apex:form >
+        <apex:pageBlock >
+         
+          
+            
+        </apex:pageBlock>
+       <apex:inputText value="{!str}"/> 
+        <apex:commandButton value="Click me" action="{!insertAccountRecord}"/>
+    </apex:form>
+</apex:page>

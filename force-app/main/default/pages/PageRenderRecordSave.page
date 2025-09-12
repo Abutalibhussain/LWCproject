@@ -1,0 +1,4 @@
+<apex:page controller="PageRenderRecordSave" action="{!methodone}">
+    <apex:form >
+    </apex:form>
+</apex:page>

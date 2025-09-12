@@ -1,0 +1,7 @@
+<apex:page controller="BindingDemo" >
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form >
+    
+    <apex:commandButton value="Click me" action="{!method2}"/>
+    </apex:form>
+</apex:page>

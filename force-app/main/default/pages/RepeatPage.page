@@ -1,0 +1,36 @@
+<apex:page controller="RepeatController" >
+    <apex:form >
+        <table>
+            <head>
+             <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Industry</th>
+            </tr>
+            </head>
+           <body>
+            <apex:repeat value="{!acclist}" var="acc">
+            <tr>
+                <td>
+                    <apex:outputText value="{!acc.Name}"/>
+                </td>
+            </tr>
+                 <tr>
+               <td>
+                     <apex:outputText value="{!acc.Phone}"/>
+                     </td> 
+            </tr>
+                 <tr>
+                <td>
+                    <apex:outputText value="{!acc.Industry}"/> 
+                     </td>
+            </tr>
+            </apex:repeat>
+            </body>
+             
+            
+           
+        </table>
+       
+    </apex:form>
+</apex:page>

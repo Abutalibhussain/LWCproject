@@ -1,0 +1,23 @@
+<aura:component controller="LightningDataTableController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.intihandler}"/>
+    
+    <aura:attribute name="acclist" type="List"/>
+    <aura:attribute name="recColumn" type="List"/>
+    <aura:attribute name="draftData" type="Object" default="[]"/>
+    
+    <div style="height: 300px">
+        <lightning:datatable
+                             keyField="Id"
+                             data="{! v.acclist }"
+                             columns="{!v.recColumn }"
+                             hideCheckboxColumn="false"
+                             onrowselection="{! c.rowSelecthandler }"
+                             draftValues="{!v.draftData}"
+                             onsave="{! c.savehandler }"      
+                             onrowaction="{!c.rowActionHandler}"/>          
+        
+    </div>
+    
+    
+    
+</aura:component>

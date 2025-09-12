@@ -1,0 +1,8 @@
+<apex:page controller="BindingDemo2" >
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form >
+	<apex:inputText label="enter your name" value="{!str}"/>  <!--inputtext capture the value and give into debug whatever i put in inputtext it will captured in debug -->  
+        <apex:commandButton value="method2" action="{!theam}"/>
+    <apex:commandButton value="Click me" action="{!method2}"/>
+    </apex:form>
+</apex:page>

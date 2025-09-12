@@ -1,0 +1,40 @@
+<aura:component controller="ReviseController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- 1 -->
+    <!--  -->
+    <aura:attribute name="str" type="string" access="public" default="abu talib hussain"/>
+    <div>hii i am div</div>
+    <div>{!v.str}</div>
+    <!-- 2 -->
+    <div style=" text-align:center; background-color: orange;">hiii in line css</div>
+    <!-- 3 -->
+    <div class="abu">external css </div>
+    <!-- 4 -->
+    <div><div class="abu">this is child class of external css with same of class</div></div>
+    <!-- 5 -->
+    <aura:attribute name="colour" type="List" default="[abu,talib,hussain,bhopal]"/>
+    <aura:iteration items="{!v.colour}" var="sam">
+        <div> {!sam}</div>
+    </aura:iteration>
+    <!-- 6 -->
+    <aura:attribute name="flag" type="boolean" access="public" default="true"/>
+    <aura:if isTrue="{!v.flag}">
+        inside if True
+        <aura:set attribute="else">
+            inside else False
+        </aura:set>
+    </aura:if> 
+    <!-- 7 one way binding -->
+    <div><lightning:button variant="Brand" label="abu" title="Base action" onclick="{! c.handleClick }"/></div><!-- title="Base action" this is optional -->
+    <!-- 8 two way binding -->
+    <lightning:button variant="Brand" label="hussain" onclick="{!c.clickHandler}"/>
+    <!-- 9 input box -->
+    <lightning:input  name="{!v.str}" label="Enter a date" onchange="{!c.changehandler}" />  
+    
+    <!-- 10 onclick alert will appear -->
+    <div onclick="{!c.divhandler}" name="abuhussain" variant="Brand"> this is div handler</div>
+    <!-- 11 custom attribute -->
+    <div onclick="{!c.divhand}" name="{!v.str}" id="divid" data-abu="javadev">this id div tag custom</div>
+    
+    <!-- fetach Account -->
+     <lightning:button label="Call server" onclick="{!c.fetchAccount}"/>
+</aura:component>

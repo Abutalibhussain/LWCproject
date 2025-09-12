@@ -1,0 +1,50 @@
+<aura:component controller= "MyFirstAuraController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<!-- Attribute declaration-->
+    
+    <aura:attribute name="str" type="string" access="public" default="salesforce devloper"/>
+    
+    <aura:attribute name="aactlist" type="List"  />
+    <div>This is my first aura CMP</div>
+    <div>{!v.str}</div>
+    
+    <!-- add inline CSS -->
+    <div style = " text-align: center; background-color: yellow;"> this is inline CSS</div>
+    
+     <!-- add external CSS -->
+    <div class="center"> this is external CSS</div>
+    
+    <div> <div class="center"> this is external CSS</div></div>
+    
+    <aura:attribute name="colorPalette" type="List" default="['red', 'green', 'blue']" />
+    
+    <div>{!v.colorPalette[0]}</div>
+	<!-- looping  -->
+    <aura:iteration items="{!v.colorPalette}" var="colour">
+      <div>{!colour}</div> 
+    </aura:iteration>
+   
+    <!--conditional rendring -->
+     <aura:attribute name="flag" type="boolean" default="false"/>
+    
+     <aura:if isTrue="{!v.flag}">
+    inside if loop
+    <aura:set attribute="else">
+      inside else loop
+    </aura:set>
+  </aura:if> 
+    
+   <!--data binding --> 
+    <div><lightning:button variant="Brand" label="Base" title="Base action" onclick="{! c.handleClick }"/></div>
+    
+    <div><lightning:button variant="Brand" label="two way data binding" title="Base action" onclick="{! c.ClickHandler }"/></div>
+    
+     <lightning:input name="input1" label="Enter a date" onchange="{!c.changeHandler}" />
+    
+    <div onclick="{!c.divHandler}" name="{!v.str}" id="divid" data-abu="java dev">this div tag</div>
+    
+     <lightning:button label="Call server" onclick="{!c.buttonHandler}"/>
+                      
+     <aura:iteration items="{!v.aactlist}" var="colour">
+      <div>{!colour.Name}</div> 
+    </aura:iteration>
+</aura:component>

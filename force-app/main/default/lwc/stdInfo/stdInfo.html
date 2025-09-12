@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+     <div class="slds-p-around_medium lgc-bg" onclick={tileClickHandler}>
+            <lightning-tile label={studentInfo.rollNumber}>
+                <p class="slds-truncate" title={studentInfo.name}>{studentInfo.name}</p>
+                <p class="slds-truncate" title={studentInfo.age}>{studentInfo.age}</p>
+            </lightning-tile>
+        </div>
+        </lightning-card>
+</template>

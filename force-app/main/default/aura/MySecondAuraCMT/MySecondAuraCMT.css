@@ -1,0 +1,11 @@
+.THIS.abu {
+    text-align: center;
+   
+     border: 5px solid red;
+}
+.THIS .abu {
+    text-align: center;
+   border: 5px solid orange;
+    background-color: coral
+      
+}

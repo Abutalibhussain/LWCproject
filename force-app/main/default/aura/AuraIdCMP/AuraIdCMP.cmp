@@ -1,0 +1,24 @@
+<aura:component controller="AuraIdController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:input aura:id="inputId" type="text" name="input1" label="Enter a date"  />
+    
+     <lightning:button variant="base" label="Base" title="Account Button" onclick="{! c.handleClick }"/>
+    
+     <lightning:button variant="base" label="Base" title="Contact Button" onclick="{! c.handleClicknew }"/>
+    
+     <lightning:button variant="base" label="Base" title="Opportunity Button" onclick="{! c.Opportunityhandle }"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.initHandler}"/>
+    
+    <aura:attribute name="acclist" type="List"/>
+    <aura:iteration items="{!v.acclist}" var="item">
+        <div>{!item.LastName}</div>
+    </aura:iteration>
+    
+     <aura:iteration items="{!v.acclist}" var="item">
+        <div onclick="{!c.divhandler}" id="{!item.Id}">{!item.Name}</div>
+    </aura:iteration>
+  
+    <aura:attribute name="reccount" type="integer" default="5"/>
+    
+    
+</aura:component>

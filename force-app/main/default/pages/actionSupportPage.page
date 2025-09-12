@@ -1,0 +1,32 @@
+<apex:page controller="actionSupportController">
+    <script>    
+    function clearInput(){
+        alert('clear input was called');
+        alert('clear input was led');
+        alert(document.getElementById('{!$Component.formid.pbid.pbid1.impid}').value);
+        document.getElementById('{!$Component.formid.pbid.pbid1.impid}').value = '';
+        
+    }
+    
+    
+    
+    </script>
+    <apex:form id="formid">
+        <apex:pageBlock id="pbid"  >
+            <apex:pageBlock id="pbid1">
+                <apex:inputText id="impid"  value="{!inputVal}" />
+            </apex:pageBlock>
+            
+            <!-- <apex:selectList value="{!str}" size="1">
+
+<apex:selectOptions value="{!selectOptionList}"/>
+<apex:actionSupport reRender="pbid" event="onchange" action="{!chnagehandler}"/>
+</apex:selectList> -->
+            <apex:commandButton onclick="setTimeout(clearInput , 1000)" reRender="formid"  value="Click me" />
+            <div >
+                Selected value is - {!str}
+            </div>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

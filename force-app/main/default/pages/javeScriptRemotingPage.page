@@ -1,0 +1,46 @@
+<apex:page controller="javeScriptRemotingController">
+    <!-- <apex:form id = "formid">
+<apex:inputText value="{!str}" id="inptextid"/>
+
+</apex:form> -->
+    <label>Enter Account Id </label>
+    <input type= "text" id= "inpid"/>
+    <input type= "button" value = "search" onclick= "fetchAccount();"/>
+    <button onclick= "fetchAccount();"> Click me</button>
+    
+    
+    
+    
+    <div id="divid">
+        
+    </div>
+    <script>
+    function fetchAccount(){
+        alert("acctid" );
+        var acctid = document.getElementById("inpid").value;
+        
+        if(acctid.trim()==""){
+            alert("please enter account id");
+        }
+			javeScriptRemotingController.AccountDetail(acctid, 1 ,function(result, event){ 
+                alert(JSON.stringify(result));
+                
+                if (event.status) {
+                    // Get DOM IDs for HTML and Visualforce elements like this
+                    document.getElementById('divid').innerHTML = 
+                        `<p>Name: ${result.Name}</p>
+                    <p>Phone:${result.Phone}</p>
+                         <p>Industry:${result.Industry}</p>`;
+                        } else {
+                         document.getElementById("divid").innerHTML = 'Account not Found';
+                        } 
+                        } 
+                         
+                    );
+                    
+                    
+                    
+                    
+                }
+                </script>
+</apex:page>
